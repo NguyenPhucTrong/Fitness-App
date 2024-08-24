@@ -3,9 +3,11 @@ import { StatusBar } from "expo-status-bar"
 import { LinearGradient } from "expo-linear-gradient";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import Animated, { FadeIn, FadeInDown, FadeOut } from 'react-native-reanimated';
+import { useRouter } from "expo-router";
 
 
 export default function Page() {
+  const router = useRouter();
 
 
   return (
@@ -29,6 +31,7 @@ export default function Page() {
           <TouchableOpacity
             style={{ height: hp(7), width: wp(80) }}
             className="bg-rose-500 flex items-center justify-center mx-auto rounded-full border-[2px] border-neutral-200"
+            onPress={() => router.push('home')}
           >
             <Text style={{fontSize:hp(3)}} className="text-white font-bold tracking-widest">
               Get Started
