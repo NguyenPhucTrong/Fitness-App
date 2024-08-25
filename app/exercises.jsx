@@ -14,12 +14,12 @@ export default function Exercise() {
   const item = useLocalSearchParams();
   console.log("item", item);
 
-  const [exercises, setExercises] = useState(demo);
+  const [exercises, setExercises] = useState([]);
   
   useEffect(() => {
-    // if (item) {
-    //   getExercises(item.name);
-    // }
+    if (item) {
+      getExercises(item.name);
+    }
   }, [item])
   
   const getExercises = async (bodypart) => {

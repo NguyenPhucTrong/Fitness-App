@@ -17,6 +17,12 @@ export default function About() {
           presentation:"fullScreenModal"
         }}
         />
+         <Stack.Screen
+          name='exerciseDetails'
+          options={{
+          presentation:"modal"
+        }}
+        />
       </Stack>
   );
 }
