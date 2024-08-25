@@ -6,6 +6,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import ImageSlide from '../components/imageSlide';
 import Carousel from 'react-native-snap-carousel';
+import BodyParts from '../components/BodyParts';
 
 
 export default function Home() {
@@ -35,8 +36,13 @@ export default function Home() {
             </View>
         </View>
         <View>
-            <ImageSlide/>
-        </View>
+          <ImageSlide/>
+      </View>
+      
+      <View className="flex-1">
+        <BodyParts />
+      </View>
+
     </SafeAreaView>
   )
 }
